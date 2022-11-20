@@ -23,7 +23,7 @@ protocol LoggedOutListener: AnyObject {
 }
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
-
+    
     weak var router: LoggedOutRouting?
     weak var listener: LoggedOutListener?
 
@@ -43,4 +43,21 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
         super.willResignActive()
         // TODO: Pause any business logic.
     }
+    
+    func login(withPlayer1Name player1Name: String?, player2Name: String?) {
+        let player1NameWithDefault = playerName(player1Name, withDefaultName: "Player1")
+        let player2NameWithDefault = playerName(player2Name, withDefaultName: "Player2")
+        
+        print("\(player1NameWithDefault) vs \(player2NameWithDefault)")
+    }
+    
+    private func playerName(_ name: String?, withDefaultName defaultName: String) -> String {
+        if let name = name {
+            return name.isEmpty ? defaultName : name
+        } else {
+            return defaultName
+        }
+            
+    }
+    
 }
