@@ -45,6 +45,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
 
     override func didBecomeActive() {
         super.didBecomeActive()
+        print("opened Root")
         // TODO: Implement business logic here.
     }
 
