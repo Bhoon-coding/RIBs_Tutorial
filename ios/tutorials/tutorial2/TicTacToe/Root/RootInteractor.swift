@@ -31,6 +31,10 @@ protocol RootListener: AnyObject {
 }
 
 final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
+    func didLogin(withPlayer1Name player1Name: String, player2Name: String) {
+        print("test")
+    }
+    
 
     weak var router: RootRouting?
 
