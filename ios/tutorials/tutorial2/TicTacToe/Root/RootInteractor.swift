@@ -37,7 +37,6 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     
 
     weak var router: RootRouting?
-
     weak var listener: RootListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
