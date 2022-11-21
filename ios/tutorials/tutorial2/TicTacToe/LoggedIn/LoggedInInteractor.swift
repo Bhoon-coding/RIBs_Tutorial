@@ -44,6 +44,6 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable {
     }
     
     func gameDidEnd() {
-        print("\(#function): 언제 불려지나 ")
+        router?.routeToOffGame()
     }
 }

@@ -55,7 +55,8 @@ final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
     }
     
     func routeToOffGame() {
-        
+        detachCurrentChild()
+        attachOffGame()
     }
 
     // MARK: - Private
